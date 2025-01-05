@@ -17,7 +17,7 @@ var price = parseFloat(prompt('Enter the price: '));   //parseFloat() is used to
 var discount = parseFloat(prompt('Enter the Discount: '));  
 try {
     if (price === null || discount === null || isNaN(price) || isNaN(discount)) { 
-        console.log(`discouted Price: `, calDiscount(price, discount)); 
+        console.log('discouted Price: ', calDiscount(price, discount)); 
     }
 } catch (error) {
     console.error(error.message);

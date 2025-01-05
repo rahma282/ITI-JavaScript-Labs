@@ -37,20 +37,9 @@ var input = prompt('Enter a string to check if it is a palindrome: ');
 
 try {
     if (input !== null && isString(input)) { 
-        console.log(`Is "${input}" a palindrome? `, isPalindeome(input)); 
+        console.log('Is ' + input + ' a palindrome? ', isPalindeome(input)); 
     }
 } catch (error) {
     console.error(error.message);
 }
 
-
-
-
-
-
-
-
-
-
-
- 
