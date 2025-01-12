@@ -1,5 +1,24 @@
 //[2] Write a function to calculate the number of vowels in a string
-function calVowels(str){
+
+var str = "hi my friend, how are you!";
+
+function countVowel(str) {
+    const vowels = "aeiouAEIOU";
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (vowels.includes(str[i])) {
+        count++;
+      }
+    }
+    return count;
+  }
+ console.log(countVowel(str));
+ 
+ 
+ 
+ 
+ /*
+ function calVowels(str){
    var countA =0;
    var countE =0;
    var countI =0;
@@ -26,5 +45,4 @@ function calVowels(str){
    console.log("Count of O vowel in " + str + " is: " +countO );
    console.log("Count of I vowel in " + str + " is: " +countI );
 }
-var str = "hi my friend, how are you!";
-calVowels(str);
+ */

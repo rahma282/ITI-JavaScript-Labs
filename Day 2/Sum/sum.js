@@ -1,4 +1,4 @@
-//[1] Write a function to calculate the sum of digits in a number
+//[1] Write a function to calculate the sum digits in a number
 function calDigits(num){
    //get last digit the add it to sum then remove it 
     var sum = 0;

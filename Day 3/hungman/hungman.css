@@ -1,0 +1,112 @@
+body {
+    color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    color: black;
+    padding: 50px;
+    margin: 50px;
+    background-color:antiquewhite ;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#title {
+    color: rgb(23, 57, 121);
+}
+
+#choose {
+    font-size: medium;
+    font-style: italic;
+}
+
+#styleCatgory {
+    font-size: large;
+    font-style: oblique;
+    color: darkblue;
+}
+
+option {
+    font-size: medium;
+    font-style: italic;
+    color: rgb(6, 6, 10);
+}
+
+#category,#start,#restart {
+    width: 20%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #a1a1a1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size: medium;
+    color: crimson;
+    font-weight: bold;
+}
+#restart{
+    color: rgb(134, 10, 128);
+}
+
+#start {
+    color: rgb(20, 117, 11);
+}
+
+#word-display {
+    margin: 20px 0;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.letters {
+    margin: 8px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.letters:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+#result-text {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+#status-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /*left*/
+    margin: 20px 0;
+}
+
+#lives {
+    color: crimson;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#hangman-image {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#timer {
+    color: blue;
+    font-size: 18px;
+    margin: 10px 0;
+}

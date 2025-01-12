@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hang Man</title>
+        <link rel="icon" href="hangman.png" type="image/jpeg">
+        <link rel="stylesheet" href="hungman.css">
+    </head>
+    <body>
+        <!--Word Selection-->
+        <main id="main">
+        <h1 id="title">Hangman Game</h1>
+        <p id="choose">Choose a category to get a random word to play hungman game!</p>
+
+        <label for="category" id="styleCatgory">Select a Category to play:</label>
+        <select id="category">
+            <option value="animals">Animals</option>
+            <option value="movies">Movies</option>
+            <option value="countries">Countries</option>
+        </select>
+        <br>
+        <button id="start">Start Game</button>
+        <div id="status-container">
+            <div id="lives">Lives Remaining: 6</div>
+            <img id="hangman-image" src="heart.png"/>
+          </div>
+        <div id="timer"></div>
+        <div id="word-display"></div>
+        <div id="letter-container"></div>
+        <p id="result-text"></p>
+        <button id="restart" style="display:none;">New Game</button>  <!--none -> hides the element-->
+
+    </main>
+        <script src="HangMan.js"></script>
+    </body>
+</html>
