@@ -53,11 +53,10 @@ function isCarInstance(obj) {
 
     const check4 = Car.prototype.isPrototypeOf(obj);                 //check if the prototype of a given object 'Car' exists in the prototype chain of another object.
 
-    const check5 = Reflect.has(obj, 'drive');                       //check if the prototype object contains specific properties or methods that belong to the class
 
-    const check6 = obj.__proto__ === Car.prototype;
+    const check5 = obj.__proto__ === Car.prototype;
 
-    return`Check using instanceof: -> ${check1} \n Check using constructor: -> ${check2} \n Check using Object.getPrototypeOf -> ${check3} \n Check using Object.prototype.isPrototypeOf -> ${check4} \n Check using Reflect.has(object, 'propetry/method') -> ${check5} \n Check using .__prto__ -> ${check6}`;
+    return`Check using instanceof: -> ${check1} \n Check using constructor: -> ${check2} \n Check using Object.getPrototypeOf -> ${check3} \n Check using Object.prototype.isPrototypeOf -> ${check4} \n Check using .__prto__ -> ${check5}`;
 }
 
 try {
