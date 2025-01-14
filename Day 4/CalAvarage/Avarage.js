@@ -25,13 +25,13 @@ return sum /this.length;
 
 
 var arr = [1, 2, 3, 4];
-console.log("Average of Array -> "+ arr +' : ' + arr.average() +"\n");
+console.log("Average of Array -> "+ arr +' : ' + arr.average() +"\n"); //10/4 -->2.5
 
 var arr2 = [];
-console.log("Average of Array -> "+ arr2 +' : ' + arr2.average() +"\n");
+console.log("Average of Array -> "+ arr2 +' : ' + arr2.average() +"\n"); //error
 
 var arr3 = ['a', 'b', 'c', 'f'];
-console.log("Average of Array -> "+ arr3 +' : ' + arr3.average() +"\n");
+console.log("Average of Array -> "+ arr3 +' : ' + arr3.average() +"\n"); //error
 
 var arr4 =["123abc"];
-console.log("Average of Array -> "+ arr4 +' : ' + arr4.average() +"\n");
+console.log("Average of Array -> "+ arr4 +' : ' + arr4.average() +"\n"); //6/3 =2

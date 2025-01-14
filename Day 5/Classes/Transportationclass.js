@@ -15,7 +15,7 @@ class Vehicle{
     
     constructor(speed, type){
         if (Vehicle.counter>=50){
-            throw new Error("Veihcle Insted Limited")
+            throw new Error("Vehicle instance limit reached")
         }
         this.speed = speed;
         this.type = type;

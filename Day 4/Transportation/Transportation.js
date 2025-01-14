@@ -9,11 +9,9 @@ You're tasked with modeling vehicles and cars in a transportation app:
      - the implementation of the methods can be console.log only or you can leave them empty 
  
     b- Write a function that checks whether an object is an instance of Car using two different ways
-
 */
 let instanceCounter =0;
-function Vehicle(type, speed) { //function constructor
-    
+function Vehicle(type, speed) {        //function constructor  
     instanceCounter++;
 
     if (instanceCounter >= 50) {
@@ -53,7 +51,6 @@ function isCarInstance(obj) {
 
     const check4 = Car.prototype.isPrototypeOf(obj);                 //check if the prototype of a given object 'Car' exists in the prototype chain of another object.
 
-
     const check5 = obj.__proto__ === Car.prototype;
 
     return`Check using instanceof: -> ${check1} \n Check using constructor: -> ${check2} \n Check using Object.getPrototypeOf -> ${check3} \n Check using Object.prototype.isPrototypeOf -> ${check4} \n Check using .__prto__ -> ${check5}`;
@@ -61,7 +58,7 @@ function isCarInstance(obj) {
 
 try {
     const car1 = new Car('Sedan', 120);
-    console.log('Is car1 a Car instance?'+ '\n', isCarInstance(car1));
+    console.log('Is car1 a Car instance?'+ '\n', isCarInstance(car1));//true
     console.log(car1);
     car1.start();
     car1.stop();
@@ -70,13 +67,13 @@ try {
 
 
     const vehicle1 = new Vehicle('Truck', 80);
-    console.log('Is vehicle1 a Car instance?'+'\n', isCarInstance(vehicle1)); //2
+    console.log('Is vehicle1 a Car instance?'+'\n', isCarInstance(vehicle1)); //false
     console.log(vehicle1);
     vehicle1.start();
     vehicle1.stop();
 
     //vehicle1.drive();// throw not a function in veihcle
-    console.log('Vehicle instance count:', instanceCounter);
+    console.log('Vehicle instance count:', instanceCounter); //2
     
     for (let i = 0; i < 50; i++) {  //create 50 instance of veihcle
         new Vehicle('Car' + i, 100);

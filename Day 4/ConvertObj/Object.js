@@ -20,9 +20,12 @@ var obj = {
         return this.message;
     }
 };
+var obj2={
+    message: 'This is a message'
+}
 console.log(({}).toString());       //'This is an object'
 console.log(obj.toString());       //'This is a message'
-console.log(String(obj));        // 'This is a message'
-console.log(JSON.stringify(obj));    //{ message: 'This is a message' }
+console.log(String(obj));         // 'This is a message'
+console.log(String(obj2))        //'This is an object'
 
 
