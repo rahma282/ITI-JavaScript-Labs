@@ -12,14 +12,30 @@ and show how many comments are made by each post. /posts /comments --> select co
 
 */
 async function fetchData(){
-    const users = await fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
-    const posts= await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json());
-    const comments = await fetch('https://jsonplaceholder.typicode.com/comments').then(res => res.json());
+    try {
+        const users = await fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to fetch users');
+                return res.json();
+            });
+
+        const posts = await fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to fetch posts');
+                return res.json();
+            });
+
+        const comments = await fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to fetch comments');
+                return res.json();
+            });
+
 
     const data = document.getElementById('data');           //work on table body
     
     users.forEach(user => {
-        const UserName=document.createElement('td')
+        const UserName=document.createElement('td') 
         const Email=document.createElement('td')
         const Company=document.createElement('td')
         const Address=document.createElement('td') 
@@ -33,7 +49,7 @@ async function fetchData(){
                 li.textContent= post.title;
                 List.appendChild(li)
                 
-                const commentCount = document.createElement('com');
+                const commentCount = document.createElement('span');
                 commentCount.textContent = ` (${comments.filter(comment => post.id === comment.postId).length} comments)`;
                 li.appendChild(commentCount);
             }
@@ -56,7 +72,9 @@ async function fetchData(){
 
         data.appendChild(row);
     });
-  
+} catch (error) {
+    console.error('An error occurred:', error.message);
+}
 }
 
 fetchData();
