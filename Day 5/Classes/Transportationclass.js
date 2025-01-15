@@ -23,16 +23,15 @@ class Vehicle{
     }
    
     start(){
-        console.log(`${type} is start`);
+        console.log(`${this.type} is start`);
     }
     stop(){
-        console.log(`${type} is start`);
+        console.log(`${this.type} is start`);
     } 
 }
 class Car extends Vehicle{
-    constructor(drive){
-        super();
-        this.drive = drive;
+    constructor(speed,type){
+        super(speed ,type);
     }
     drive(){
         console.log('Driver drive the car');
@@ -71,4 +70,5 @@ try {
     console.log('Vehicle instance count: ',  Vehicle.counter);  //52 throw limted
 } catch (error) {
     console.error(error.message);
+
 }
